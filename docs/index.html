@@ -85,43 +85,21 @@
         </div>
 
         <div class="hero-stage" aria-hidden="true">
-          <div class="stage-wallpaper"></div>
           <div class="stage-bar">
-            <div class="spot-mock">
+            <div class="spot-mock" id="demoBar">
               <div class="spot-input-row">
                 <span class="spot-search-icon">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
                 </span>
-                <span class="spot-input-text">steam</span>
+                <span class="spot-input-text" id="demoInput"></span>
+                <span class="spot-caret" id="demoCaret" aria-hidden="true"></span>
                 <button class="spot-settings-btn" tabindex="-1" aria-hidden="true">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 1 .33 1.82 1.65 1.65 0 0 1-1.51 1H3"/></svg>
                 </button>
               </div>
-              <ul class="spot-list">
-                <li class="spot-row is-active">
-                  <img class="spot-icon" src="assets/apps/steam.png" alt="" width="20" height="20" />
-                  <span class="spot-name"><span class="match">S</span>team</span>
-                </li>
-                <li class="spot-row">
-                  <img class="spot-icon" src="assets/apps/spotify.png" alt="" width="20" height="20" />
-                  <span class="spot-name"><span class="match">S</span>potify</span>
-                </li>
-                <li class="spot-row">
-                  <img class="spot-icon" src="assets/apps/settings.png" alt="" width="20" height="20" />
-                  <span class="spot-name"><span class="match">S</span>ettings</span>
-                </li>
-                <li class="spot-row">
-                  <span class="spot-icon spot-icon-tile" aria-hidden="true">S</span>
-                  <span class="spot-name"><span class="match">S</span>lack</span>
-                </li>
-                <li class="spot-row">
-                  <span class="spot-icon spot-icon-tile" aria-hidden="true">S</span>
-                  <span class="spot-name"><span class="match">S</span>nipping tool</span>
-                </li>
-              </ul>
+              <ul class="spot-list" id="demoList"></ul>
             </div>
           </div>
-          <p class="stage-caption mono">Live results as you type · Enter opens · Esc hides</p>
         </div>
       </section>
 
