@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#0c0c0c" />
+  <title>Ray — a launcher that stays out of the way</title>
+  <meta name="description" content="Ray is a floating search bar for Windows. Press Ctrl + Space, type a few letters, and the app you want is already open." />
+  <link rel="icon" type="image/png" href="assets/ray-icon.png" sizes="256x256" />
+  <link rel="apple-touch-icon" href="assets/ray-icon.png" />
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Ray home">
+      <img class="brand-mark" src="assets/ray-icon.png" alt="" width="22" height="22" />
+      <span class="brand-name">ray</span>
+    </a>
+    <nav class="topnav" aria-label="Primary">
+      <a class="topnav-link" href="#features"><span class="topnav-index">01</span> Features</a>
+      <a class="topnav-link" href="#shortcuts"><span class="topnav-index">02</span> Shortcuts</a>
+      <a class="topnav-link" href="#download"><span class="topnav-index">03</span> Download</a>
+      <a class="topnav-link topnav-external" href="https://github.com/vihanga-nimsara/ray" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+        GitHub
+      </a>
+    </nav>
+  </header>
+
+  <main id="content">
+    <section class="hero" id="top">
+      <div class="wrap">
+        <p class="eyebrow mono reveal">ray · 0.1.0 · windows launcher</p>
+        <h1 class="hero-title reveal">Every app, one keystroke away.</h1>
+        <p class="hero-copy reveal">Ray is a floating search bar for Windows. Press Ctrl + Space, type a few letters, and the app you want is already open. No dock, no desktop clutter, no window to manage.</p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="https://github.com/vihanga-nimsara/ray/releases/download/v0.1.0/Ray-0.1.0-setup.exe">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download for Windows
+          </a>
+          <a class="btn btn-secondary" href="https://github.com/vihanga-nimsara/ray/releases/download/v0.1.0/Ray-0.1.0-portable.exe">
+            Portable build
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/vihanga-nimsara/ray" target="_blank" rel="noopener">View source</a>
+        </div>
+        <div class="hero-meta reveal">
+          <span class="meta-item">Windows 10/11 · x64</span>
+          <span class="meta-dot" aria-hidden="true"></span>
+          <span class="meta-item">Free and open source · MIT</span>
+        </div>
+        <div class="hero-keyhint reveal">
+          <span class="keyhint-label mono">Summon it with</span>
+          <span class="keycaps" aria-label="Control plus space">
+            <kbd class="keycap">Ctrl</kbd>
+            <span class="keycap-plus">+</span>
+            <kbd class="keycap">Space</kbd>
+          </span>
+          <button class="copy-key" type="button" data-copy="Ctrl + Space" aria-label="Copy shortcut">Copy</button>
+        </div>
+
+        <div class="hero-stage reveal" aria-hidden="true">
+          <div class="stage-wallpaper"></div>
+          <div class="stage-bar">
+            <div class="spot-mock">
+              <div class="spot-input-row">
+                <span class="spot-search-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+                </span>
+                <span class="spot-input-text">steam</span>
+                <span class="spot-caret" aria-hidden="true"></span>
+                <button class="spot-settings-btn" tabindex="-1" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+                </button>
+              </div>
+              <ul class="spot-list">
+                <li class="spot-row is-active">
+                  <img class="spot-icon" src="assets/apps/steam.png" alt="" width="22" height="22" />
+                  <span class="spot-name"><span class="match">S</span>team</span>
+                </li>
+                <li class="spot-row">
+                  <img class="spot-icon" src="assets/apps/spotify.png" alt="" width="22" height="22" />
+                  <span class="spot-name"><span class="match">S</span>potify</span>
+                </li>
+                <li class="spot-row">
+                  <img class="spot-icon" src="assets/apps/settings.png" alt="" width="22" height="22" />
+                  <span class="spot-name"><span class="match">S</span>ettings</span>
+                </li>
+                <li class="spot-row">
+                  <span class="spot-icon spot-icon-tile" aria-hidden="true">S</span>
+                  <span class="spot-name"><span class="match">S</span>lack</span>
+                </li>
+                <li class="spot-row">
+                  <span class="spot-icon spot-icon-tile" aria-hidden="true">S</span>
+                  <span class="spot-name"><span class="match">S</span>nipping tool</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p class="stage-caption mono">Live results as you type · Enter opens · Esc hides</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="section-eyebrow mono">[01] Why ray</p>
+          <h2 class="section-title">Built to disappear.</h2>
+          <p class="section-copy">Ray shows up for one job and gets out of the way. Nothing to manage, nothing to close.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <span class="feature-index mono">01</span>
+            <h3>Instant by default</h3>
+            <p>The index is ready before you finish pressing the shortcut. Refreshes happen only while the bar is hidden.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-index mono">02</span>
+            <h3>Keyboard first</h3>
+            <p>Arrows, Enter, Esc and Ctrl + Enter. Selection never sticks after launch.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-index mono">03</span>
+            <h3>Yours to tune</h3>
+            <p>Scale from 70% to 120%, recent count, result count, launch at login.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-index mono">04</span>
+            <h3>Out of the way</h3>
+            <p>A tray app with no main window. Hides on Esc or a click outside.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-index mono">05</span>
+            <h3>Real icons</h3>
+            <p>Start menu and Store apps, indexed with their native icons.</p>
+          </article>
+          <article class="feature-card reveal">
+            <span class="feature-index mono">06</span>
+            <h3>Quietly fast</h3>
+            <p>Typing is coalesced to one render per frame. The window resizes only when it needs to.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="how">
+      <div class="wrap how-wrap">
+        <div class="how-copy reveal">
+          <p class="section-eyebrow mono">[02] How it works</p>
+          <h2 class="section-title">Three steps, then it is gone.</h2>
+          <p class="section-copy">Ray opens on top of everything, takes your query, and hides the moment you are done.</p>
+        </div>
+        <ol class="how-steps">
+          <li class="how-step reveal">
+            <span class="how-number mono">01</span>
+            <div>
+              <h3>Summon</h3>
+              <p>Press Ctrl + Space anywhere in Windows. The bar appears centered, above every window.</p>
+            </div>
+          </li>
+          <li class="how-step reveal">
+            <span class="how-number mono">02</span>
+            <div>
+              <h3>Type</h3>
+              <p>Recent apps show before you type. A few letters narrow the list to the one you want.</p>
+            </div>
+          </li>
+          <li class="how-step reveal">
+            <span class="how-number mono">03</span>
+            <div>
+              <h3>Open</h3>
+              <p>Enter launches. The bar resets, so the next search starts clean.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="shortcuts">
+      <div class="wrap shortcuts-wrap">
+        <div class="shortcuts-copy reveal">
+          <p class="section-eyebrow mono">[03] Shortcuts</p>
+          <h2 class="section-title">Drive it from the keyboard.</h2>
+          <p class="section-copy">The pointer stays visible, but you rarely need it.</p>
+        </div>
+        <div class="shortcut-list reveal">
+          <div class="shortcut-row">
+            <div class="shortcut-keys">
+              <kbd class="keycap">Ctrl</kbd><span class="keycap-plus">+</span><kbd class="keycap">Space</kbd>
+            </div>
+            <p>Show or hide Ray</p>
+          </div>
+          <div class="shortcut-row">
+            <div class="shortcut-keys">
+              <kbd class="keycap">↑</kbd><span class="keycap-plus">/</span><kbd class="keycap">↓</kbd>
+            </div>
+            <p>Move selection</p>
+          </div>
+          <div class="shortcut-row">
+            <div class="shortcut-keys">
+              <kbd class="keycap">Enter</kbd>
+            </div>
+            <p>Open the selected app</p>
+          </div>
+          <div class="shortcut-row">
+            <div class="shortcut-keys">
+              <kbd class="keycap">Ctrl</kbd><span class="keycap-plus">+</span><kbd class="keycap">Enter</kbd>
+            </div>
+            <p>Reveal the app shortcut in Explorer</p>
+          </div>
+          <div class="shortcut-row">
+            <div class="shortcut-keys">
+              <kbd class="keycap">Esc</kbd>
+            </div>
+            <p>Hide the bar, or close settings</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="wrap settings-wrap">
+        <div class="settings-copy reveal">
+          <p class="section-eyebrow mono">[04] Settings</p>
+          <h2 class="section-title">Tune it to your taste.</h2>
+          <p class="section-copy">Open settings from the gear in the bar or the tray menu. Changes apply immediately.</p>
+          <ul class="settings-list">
+            <li>Floating bar on and off</li>
+            <li>Bar size from 70% to 120%</li>
+            <li>Recent apps on open, 1 to 5</li>
+            <li>Results while searching, 5 to 10</li>
+            <li>Launch at login</li>
+            <li>App index status and rebuild</li>
+            <li>Reset defaults and quit</li>
+          </ul>
+        </div>
+        <div class="settings-shot reveal">
+          <img src="assets/ray-settings.png" alt="Ray settings window" width="560" height="640" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="download">
+      <div class="wrap">
+        <div class="download-card reveal">
+          <img class="download-logo" src="assets/ray-icon.png" alt="" width="64" height="64" />
+          <p class="section-eyebrow mono">[05] Download</p>
+          <h2 class="section-title">Get Ray for Windows.</h2>
+          <p class="section-copy">Free and open source. Unsigned build, so Windows SmartScreen may ask for confirmation.</p>
+          <div class="download-actions">
+            <a class="btn btn-primary" href="https://github.com/vihanga-nimsara/ray/releases/download/v0.1.0/Ray-0.1.0-setup.exe">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download installer
+            </a>
+            <a class="btn btn-secondary" href="https://github.com/vihanga-nimsara/ray/releases/download/v0.1.0/Ray-0.1.0-portable.exe">Portable build</a>
+            <a class="btn btn-ghost" href="https://github.com/vihanga-nimsara/ray/releases/tag/v0.1.0">Release notes</a>
+          </div>
+          <p class="download-meta mono">ray 0.1.0 · windows 10/11 · x64 · electron</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-wrap">
+      <div class="footer-brand">
+        <img class="brand-mark" src="assets/ray-icon.png" alt="" width="20" height="20" />
+        <span class="brand-name">ray</span>
+        <p class="footer-copy">A macOS-Spotlight-style floating app launcher for Windows. MIT licensed.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="https://github.com/vihanga-nimsara/ray">GitHub</a>
+        <a href="https://github.com/vihanga-nimsara/ray/releases">Releases</a>
+        <a href="https://github.com/vihanga-nimsara/ray/issues">Issues</a>
+        <a href="https://github.com/vihanga-nimsara/ray/blob/main/LICENSE">License</a>
+      </nav>
+    </div>
+    <div class="wrap footer-bottom">
+      <span class="mono">Built with Electron. Inter by Rasmus Andersson. Icons from Heroicons.</span>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

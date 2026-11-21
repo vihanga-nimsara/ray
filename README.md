@@ -159,6 +159,11 @@ src/
   js/settings.js             live settings controls
 scripts/
   icons-from-logo.ps1        builds icon.png + icon.ico from the app logo
+docs/
+  index.html                 landing page
+  styles.css
+  main.js
+  assets/                    screenshots and icons for the site
 assets/
   ray-icon.png               source app logo (2048 x 2048)
   tray.png / tray@2x.png     background/tray logo
@@ -170,6 +175,16 @@ Data lives in `%APPDATA%\Ray`:
 
 - `index-cache.json` — indexed apps and icons
 - `ray-state.json` — launch history and settings
+
+## Landing page
+
+A static landing page lives in `docs/`. Preview it with any static server pointed at `docs/`, for example:
+
+```powershell
+npx serve docs
+```
+
+The page is written to work on GitHub Pages from the `docs/` folder on `main`.
 
 ## Shortcuts
 

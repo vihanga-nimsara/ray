@@ -48,6 +48,12 @@ const debug = Boolean(process.env.RAY_DEBUG);
 const silentStart = process.argv.includes('--silent');
 const isPortable = Boolean(process.env.PORTABLE_EXECUTABLE_FILE);
 
+// capturePage is unreliable with the GPU compositor on some Windows setups.
+// Screenshot mode is only used for documentation, so render it in software.
+if (process.env.RAY_SHOT) {
+  app.disableHardwareAcceleration();
+}
+
 function log(...args) {
   if (debug) console.log('[ray]', ...args);
 }
