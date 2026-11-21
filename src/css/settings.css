@@ -1,0 +1,501 @@
+/* ============================================================
+   Ray — settings
+   Same OpenCode dark language as the bar: one grey scale,
+   hairline dividers, square surfaces, mono labels, Inter body.
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: var(--oc-bg);
+  color: var(--oc-ink);
+  font-family: var(--ray-font);
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  border: 0;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 1px solid var(--oc-link);
+  outline-offset: 2px;
+}
+
+.settings-app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--oc-border);
+  background: var(--oc-bg);
+}
+
+/* ---------- Title bar ---------- */
+
+.titlebar {
+  display: flex;
+  align-items: center;
+  flex: none;
+  height: 42px;
+  padding-left: 14px;
+  border-bottom: 1px solid var(--oc-border);
+  background: var(--oc-bg);
+  -webkit-app-region: drag;
+}
+
+.titlebar-left {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 17px;
+  height: 17px;
+  color: var(--oc-ink);
+}
+
+.brand-mark svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+
+.brand-name {
+  font-family: var(--ray-mono);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--oc-ink);
+}
+
+.brand-sep {
+  width: 1px;
+  height: 13px;
+  background: var(--oc-border);
+}
+
+.brand-crumb {
+  color: var(--oc-muted);
+  font-size: 12px;
+}
+
+.window-controls {
+  display: flex;
+  align-self: stretch;
+  margin-left: auto;
+  -webkit-app-region: no-drag;
+}
+
+.win-btn {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 100%;
+  color: var(--oc-muted);
+  transition:
+    background-color var(--hover-dur) var(--ease-smooth-out),
+    color var(--hover-dur) var(--ease-smooth-out);
+}
+
+.win-btn svg {
+  width: 10px;
+  height: 10px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+  stroke-linecap: round;
+}
+
+.win-btn:hover {
+  background: var(--oc-hover);
+  color: var(--oc-ink);
+}
+
+.win-btn.close:hover {
+  background: var(--oc-danger);
+  color: #ffffff;
+}
+
+/* ---------- Content ---------- */
+
+.settings-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 26px 28px 22px;
+}
+
+.settings-head {
+  max-width: 440px;
+}
+
+.eyebrow {
+  margin: 0 0 9px;
+  color: var(--oc-icon);
+  font-size: 12px;
+  letter-spacing: 0.015em;
+}
+
+.settings-head h1 {
+  margin: 0;
+  font-family: var(--ray-mono);
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  color: var(--oc-ink);
+}
+
+.lead {
+  margin: 9px 0 0;
+  color: var(--oc-muted);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+
+.section {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--oc-border);
+}
+
+.section-label {
+  margin: 0 0 6px;
+  color: var(--oc-muted);
+  font-size: 12px;
+  letter-spacing: 0.015em;
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 9px 0;
+}
+
+.setting-copy {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 310px;
+}
+
+.setting-title {
+  color: var(--oc-ink);
+  font-size: 14.5px;
+  line-height: 1.4;
+}
+
+.setting-desc {
+  margin-top: 2px;
+  color: var(--oc-muted);
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
+.setting-row > .segmented,
+.setting-row > .stepper,
+.setting-row > .switch {
+  flex: none;
+}
+
+.appearance-row {
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.appearance-row .segmented {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.appearance-row .segmented button {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ---------- Switch ---------- */
+
+.switch {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  border-radius: var(--ray-radius-pill);
+  background: var(--oc-border);
+  transition: background-color var(--hover-dur) var(--ease-smooth-out);
+}
+
+.switch .knob {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--oc-muted);
+  transition:
+    left var(--hover-dur) var(--ease-smooth-out),
+    background-color var(--hover-dur) var(--ease-smooth-out);
+}
+
+.switch[aria-checked="true"] {
+  background: var(--oc-ink);
+}
+
+.switch[aria-checked="true"] .knob {
+  left: 19px;
+  background: var(--oc-bg);
+}
+
+.switch[disabled] {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* ---------- Segmented control ---------- */
+
+.segmented {
+  display: flex;
+  align-items: stretch;
+  height: 28px;
+  overflow: hidden;
+  border: 1px solid var(--oc-border);
+  border-radius: var(--ray-radius-sm);
+  background: var(--oc-fill);
+}
+
+.segmented button {
+  min-width: 43px;
+  padding: 0 8px;
+  border-left: 1px solid var(--oc-border);
+  color: var(--oc-muted);
+  font-family: var(--ray-mono);
+  font-size: 12px;
+  line-height: 1;
+  transition:
+    background-color var(--hover-dur) var(--ease-smooth-out),
+    color var(--hover-dur) var(--ease-smooth-out);
+}
+
+.segmented button:first-child {
+  border-left: 0;
+}
+
+.segmented button:hover {
+  background: var(--oc-hover);
+  color: var(--oc-ink);
+}
+
+.segmented button[aria-pressed="true"] {
+  background: var(--oc-hover);
+  color: var(--oc-ink);
+}
+
+/* ---------- Stepper ---------- */
+
+.stepper {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  overflow: hidden;
+  border: 1px solid var(--oc-border);
+  border-radius: var(--ray-radius-sm);
+  background: var(--oc-fill);
+}
+
+.stepper button {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 100%;
+  color: var(--oc-body);
+  font-size: 15px;
+  line-height: 1;
+  transition:
+    background-color var(--hover-dur) var(--ease-smooth-out),
+    color var(--hover-dur) var(--ease-smooth-out);
+}
+
+.stepper button:hover {
+  background: var(--oc-hover);
+  color: var(--oc-ink);
+}
+
+.stepper button:disabled {
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.stepper span {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 100%;
+  border-left: 1px solid var(--oc-border);
+  border-right: 1px solid var(--oc-border);
+  color: var(--oc-ink);
+  font-family: var(--ray-mono);
+  font-size: 12px;
+}
+
+/* ---------- Buttons and shortcut ---------- */
+
+.inline-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 2px;
+}
+
+.shortcut {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.shortcut kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 22px;
+  min-width: 22px;
+  padding: 0 6px;
+  border: 1px solid var(--oc-border);
+  border-radius: var(--ray-radius-xs);
+  background: var(--oc-fill);
+  color: var(--oc-body);
+  font-family: var(--ray-mono);
+  font-size: 12px;
+  line-height: 1;
+}
+
+.shortcut.is-off kbd {
+  color: var(--oc-icon);
+  opacity: 0.55;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 0 11px;
+  border: 1px solid var(--oc-border);
+  border-radius: var(--ray-radius-sm);
+  color: var(--oc-body);
+  font-size: 12.5px;
+  line-height: 1;
+  transition:
+    background-color var(--hover-dur) var(--ease-smooth-out),
+    border-color var(--hover-dur) var(--ease-smooth-out),
+    color var(--hover-dur) var(--ease-smooth-out),
+    opacity var(--hover-dur) var(--ease-smooth-out);
+}
+
+.btn:hover {
+  background: var(--oc-hover);
+  border-color: var(--oc-border-strong);
+  color: var(--oc-ink);
+}
+
+.btn:disabled {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+/* ---------- Footer ---------- */
+
+.settings-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 26px;
+  padding-top: 14px;
+  border-top: 1px solid var(--oc-border);
+}
+
+.version {
+  color: var(--oc-icon);
+  font-size: 12px;
+  letter-spacing: 0.01em;
+}
+
+.footer-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.text-btn {
+  color: var(--oc-muted);
+  font-size: 12.5px;
+  transition: color var(--hover-dur) var(--ease-smooth-out);
+}
+
+.text-btn:hover {
+  color: var(--oc-ink);
+}
+
+.text-btn.danger:hover {
+  color: var(--oc-danger);
+}
+
+/* ---------- Scrollbar ---------- */
+
+.settings-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.settings-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.settings-scroll::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 8px;
+  background: var(--oc-border-strong);
+  background-clip: content-box;
+}
+
+.settings-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--oc-muted);
+  background-clip: content-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .win-btn,
+  .switch,
+  .switch .knob,
+  .segmented button,
+  .stepper button,
+  .btn,
+  .text-btn {
+    transition: none !important;
+  }
+}

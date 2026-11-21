@@ -1,0 +1,112 @@
+/* ============================================================
+   Ray — tokens
+
+   Visual language: the OpenCode app.
+   One neutral grey scale, hairline borders, square-ish surfaces,
+   Inter for every piece of text, and a single blue for focus and
+   selected states.
+
+   The transitions.dev component contract is --stage-*; each one
+   is mapped onto the OpenCode palette below. Motion is untouched.
+   ============================================================ */
+
+@font-face {
+  font-family: "InterVariable";
+  src: url("../../assets/fonts/inter-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+
+  /* OpenCode dark scale */
+  --oc-bg: #0c0c0c;
+  --oc-panel: #161616;
+  --oc-fill: #1a1a1a;
+  --oc-hover: #242424;
+  --oc-border: #2e2e2e;
+  --oc-border-strong: #4b4b4b;
+  --oc-icon: #6a6a6a;
+  --oc-muted: #8f8f8f;
+  --oc-body: #aeaeae;
+  --oc-emphasis: #dbdbdb;
+  --oc-ink: #fafafa;
+  --oc-link: #6b8fff;
+  --oc-link-hover: #8aa6ff;
+  --oc-danger: #f85149;
+
+  /* Ray token layer (aliases) */
+  --ray-bg: var(--oc-bg);
+  --ray-bg-deep: #080808;
+  --ray-surface: var(--oc-panel);
+  --ray-surface-2: var(--oc-fill);
+  --ray-surface-3: var(--oc-hover);
+  --ray-fg: var(--oc-ink);
+  --ray-fg-soft: var(--oc-emphasis);
+  --ray-body: var(--oc-body);
+  --ray-muted: var(--oc-muted);
+  --ray-faint: var(--oc-icon);
+  --ray-border: var(--oc-border);
+  --ray-border-strong: var(--oc-border-strong);
+  --ray-accent: var(--oc-link);
+  --ray-accent-strong: var(--oc-link);
+  --ray-accent-ink: #ffffff;
+  --ray-accent-wash: rgba(107, 143, 255, 0.12);
+  --ray-accent-line: rgba(107, 143, 255, 0.55);
+  --ray-danger: var(--oc-danger);
+  --ray-warn: var(--oc-muted);
+
+  /* Type — Inter is the only typeface used in the app. */
+  --ray-font: "InterVariable", "Inter", "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --ray-mono: var(--ray-font);
+
+  /* Shape — square surfaces, round icons, dots and pills only */
+  --ray-radius-xs: 3px;
+  --ray-radius-sm: 4px;
+  --ray-radius-md: 6px;
+  --ray-radius-lg: 6px;
+  --ray-radius-xl: 8px;
+  --ray-radius-pill: 999px;
+
+  /* Surfaces */
+  --ray-shadow-pop: 0 16px 40px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.35),
+    0 0 0 1px var(--oc-border);
+  --ray-hairline: none;
+
+  /* ----- Stage bridge -------------------------------------- */
+  --stage-bg: var(--oc-bg);
+  --stage-fg: var(--oc-ink);
+  --stage-muted: var(--oc-muted);
+  --stage-border: var(--oc-border);
+  --stage-surface: var(--oc-panel);
+  --stage-accent: var(--oc-link);
+  --stage-on-accent: #ffffff;
+
+  /* ----- Motion contract (unchanged) ----------------------- */
+  --dropdown-open-dur: 250ms;
+  --dropdown-close-dur: 150ms;
+  --dropdown-pre-scale: 0.97;
+  --dropdown-closing-scale: 0.99;
+  --dropdown-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --press-scale: 0.99;
+  --press-dur: 150ms;
+  --hover-dur: 150ms;
+  --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* ----- Component surface values -------------------------- */
+  --chip: var(--oc-hover);
+  --chip-hover: var(--oc-border);
+  --material-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.35),
+    0 0 0 1px var(--oc-border);
+  --cta-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme="dark"] {
+  --chip: var(--oc-hover);
+  --chip-hover: var(--oc-border);
+  --material-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.35),
+    0 0 0 1px var(--oc-border);
+  --cta-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.shots*/
+.final*/
+.opaque*/
+.screen*.png
+*.log

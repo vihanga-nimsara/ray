@@ -1,0 +1,149 @@
+/* ============================================================
+   Transitions.dev — Skeleton loader and reveal
+   Adapted for Ray's vanilla quick-search list. Motion values
+   are unchanged:
+     pulse 1000ms (50% opacity), reveal 400ms ease-in-out,
+     2px blur, instant reduced-motion fallback.
+
+   The skeleton and content share the same slot during loading,
+   then cross-fade. Ray uses an infinite pulse while the index
+   is being built; the default token remains 1.
+   ============================================================ */
+
+:root {
+  --pulse-dur: 1000ms;
+  --pulse-count: 1;
+  --pulse-min: 0.5;
+  --reveal-dur: 400ms;
+  --reveal-blur: 2px;
+  --reveal-ease: ease-in-out;
+}
+
+.spot-skel {
+  position: relative;
+  --pulse-count: infinite;
+}
+
+.spot-skel:not(.is-loading) .t-skel-skeleton {
+  display: none;
+}
+
+.spot-skel.is-loading {
+  min-height: 244px;
+}
+
+.spot-skel.is-loading .t-skel-skeleton,
+.spot-skel.is-loading .t-skel-content {
+  position: absolute;
+  inset: 0;
+}
+
+.spot-skel.is-loading .t-skel-skeleton {
+  z-index: 1;
+  opacity: 1;
+  filter: blur(0);
+  transition:
+    opacity var(--reveal-dur) var(--reveal-ease),
+    filter var(--reveal-dur) var(--reveal-ease);
+}
+
+.spot-skel.is-loading .t-skel-content {
+  z-index: 2;
+  opacity: 0;
+  filter: blur(var(--reveal-blur));
+  transition:
+    opacity var(--reveal-dur) var(--reveal-ease),
+    filter var(--reveal-dur) var(--reveal-ease);
+}
+
+.spot-skel.is-loading.is-revealed .t-skel-skeleton {
+  opacity: 0;
+  filter: blur(var(--reveal-blur));
+}
+
+.spot-skel.is-loading.is-revealed .t-skel-content {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.spot-skel.is-resetting .t-skel-skeleton,
+.spot-skel.is-resetting .t-skel-content {
+  transition: none !important;
+}
+
+/* Pulse the row children, not the skeleton layer itself, so the
+   skeleton's opacity/filter stay free for the reveal transition. */
+.spot-skel .t-skel-skeleton.is-pulsing > * {
+  animation: t-skel-pulse var(--pulse-dur) ease-in-out var(--pulse-count);
+}
+
+@keyframes t-skel-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: var(--pulse-min);
+  }
+}
+
+/* ---------- Skeleton rows ---------- */
+
+.t-skel-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.skel-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 48px;
+  padding: 0 10px;
+}
+
+.skel-avatar {
+  width: 28px;
+  height: 28px;
+  flex: none;
+  border-radius: var(--ray-radius-md);
+  background: var(--oc-border);
+}
+
+.skel-line {
+  height: 8px;
+  border-radius: 2px;
+  background: var(--oc-border);
+}
+
+.skel-row:nth-child(1) .skel-line {
+  width: 37%;
+}
+
+.skel-row:nth-child(2) .skel-line {
+  width: 25%;
+}
+
+.skel-row:nth-child(3) .skel-line {
+  width: 45%;
+}
+
+.skel-row:nth-child(4) .skel-line {
+  width: 31%;
+}
+
+.skel-row:nth-child(5) .skel-line {
+  width: 23%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spot-skel.is-loading .t-skel-skeleton,
+  .spot-skel.is-loading .t-skel-content {
+    transition: none !important;
+  }
+
+  .spot-skel .t-skel-skeleton.is-pulsing > * {
+    animation: none !important;
+  }
+}

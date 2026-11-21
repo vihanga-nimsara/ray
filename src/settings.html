@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="color-scheme" content="dark">
+  <title>Ray Settings</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/settings.css">
+</head>
+<body>
+  <div class="settings-app">
+    <header class="titlebar">
+      <div class="titlebar-left">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 1.9c.62 5.36 4.74 9.48 10.1 10.1-5.36.62-9.48 4.74-10.1 10.1C11.38 16.74 7.26 12.62 1.9 12 7.26 11.38 11.38 7.26 12 1.9Z"/></svg>
+        </span>
+        <span class="brand-name mono">ray</span>
+        <span class="brand-sep"></span>
+        <span class="brand-crumb">Settings</span>
+      </div>
+      <div class="window-controls">
+        <button type="button" class="win-btn" id="minimize" aria-label="Minimize">
+          <svg viewBox="0 0 12 12"><path d="M2 6h8"/></svg>
+        </button>
+        <button type="button" class="win-btn close" id="close" aria-label="Close">
+          <svg viewBox="0 0 12 12"><path d="m2.4 2.4 7.2 7.2M9.6 2.4 2.4 9.6"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main class="settings-scroll">
+      <div class="settings-head">
+        <p class="eyebrow mono">Preferences</p>
+        <h1>Settings</h1>
+        <p class="lead">Customize the floating bar. Changes apply immediately.</p>
+      </div>
+
+      <section class="section">
+        <p class="section-label mono">Floating bar</p>
+        <div class="setting-row">
+          <div class="setting-copy">
+            <span class="setting-title">Search bar</span>
+            <span class="setting-desc" id="barStatus">Ctrl + Space anywhere in Windows</span>
+          </div>
+          <button type="button" class="switch" id="enabledSwitch" role="switch" aria-checked="true" aria-label="Floating bar enabled">
+            <span class="knob"></span>
+          </button>
+        </div>
+        <div class="inline-row">
+          <div class="shortcut" id="shortcutKeys"></div>
+          <button type="button" class="btn" id="showBar">Show bar</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="section-label mono">Appearance</p>
+        <div class="setting-row appearance-row">
+          <div class="setting-copy">
+            <span class="setting-title">Bar size</span>
+            <span class="setting-desc">Scales the floating bar and its text.</span>
+          </div>
+          <div class="segmented" id="scaleGroup" role="group" aria-label="Bar size">
+            <button type="button" data-scale="0.7">70%</button>
+            <button type="button" data-scale="0.8">80%</button>
+            <button type="button" data-scale="0.9">90%</button>
+            <button type="button" data-scale="1">100%</button>
+            <button type="button" data-scale="1.1">110%</button>
+            <button type="button" data-scale="1.2">120%</button>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="section">
+        <p class="section-label mono">Search</p>
+        <div class="setting-row">
+          <div class="setting-copy">
+            <span class="setting-title">Recent apps on open</span>
+            <span class="setting-desc">Recent apps first, then suggestions before typing. Maximum 5.</span>
+          </div>
+          <div class="stepper" data-setting="recentCount">
+            <button type="button" data-step="-1" aria-label="Fewer recent apps">−</button>
+            <span id="recentValue">5</span>
+            <button type="button" data-step="1" aria-label="More recent apps">+</button>
+          </div>
+        </div>
+        <div class="setting-row">
+          <div class="setting-copy">
+            <span class="setting-title">Results while searching</span>
+            <span class="setting-desc">Matches shown below the field. Maximum 10.</span>
+          </div>
+          <div class="stepper" data-setting="maxResults">
+            <button type="button" data-step="-1" aria-label="Fewer results">−</button>
+            <span id="resultsValue">10</span>
+            <button type="button" data-step="1" aria-label="More results">+</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="section-label mono">Startup</p>
+        <div class="setting-row">
+          <div class="setting-copy">
+            <span class="setting-title">Launch at login</span>
+            <span class="setting-desc" id="loginDesc">Start Ray silently when you sign in.</span>
+          </div>
+          <button type="button" class="switch" id="loginSwitch" role="switch" aria-checked="false" aria-label="Launch at login">
+            <span class="knob"></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="section">
+        <p class="section-label mono">App index</p>
+        <div class="setting-row">
+          <div class="setting-copy">
+            <span class="setting-title" id="indexCount">0 apps indexed</span>
+            <span class="setting-desc" id="indexStatus">Reading index status…</span>
+          </div>
+          <button type="button" class="btn" id="rebuild">Rebuild index</button>
+        </div>
+      </section>
+
+      <footer class="settings-footer">
+        <span class="mono version">Ray <span id="version">0.1.0</span></span>
+        <div class="footer-actions">
+          <button type="button" class="text-btn" id="reset">Reset defaults</button>
+          <button type="button" class="text-btn danger" id="quit">Quit Ray</button>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="js/settings.js"></script>
+</body>
+</html>
