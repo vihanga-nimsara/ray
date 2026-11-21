@@ -17,13 +17,13 @@
 
   <header class="topbar">
     <a class="brand" href="#top" aria-label="Ray home">
-      <img class="brand-mark" src="assets/ray-icon.png" alt="" width="22" height="22" />
+      <img class="brand-mark" src="assets/ray-icon.png" alt="" width="20" height="20" />
       <span class="brand-name">ray</span>
     </a>
     <nav class="topnav" aria-label="Primary">
-      <a class="topnav-link" href="#features"><span class="topnav-index">01</span> Features</a>
-      <a class="topnav-link" href="#shortcuts"><span class="topnav-index">02</span> Shortcuts</a>
-      <a class="topnav-link" href="#download"><span class="topnav-index">03</span> Download</a>
+      <a class="topnav-link" href="#features">Features</a>
+      <a class="topnav-link" href="#shortcuts">Shortcuts</a>
+      <a class="topnav-link" href="#download">Download</a>
       <a class="topnav-link topnav-external" href="https://github.com/vihanga-nimsara/ray" target="_blank" rel="noopener">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
         GitHub
@@ -34,10 +34,10 @@
   <main id="content">
     <section class="hero" id="top">
       <div class="wrap">
-        <p class="eyebrow mono reveal">ray · 0.1.0 · windows launcher</p>
-        <h1 class="hero-title reveal">Every app, one keystroke away.</h1>
-        <p class="hero-copy reveal">Ray is a floating search bar for Windows. Press Ctrl + Space, type a few letters, and the app you want is already open. No dock, no desktop clutter, no window to manage.</p>
-        <div class="hero-actions reveal">
+        <p class="eyebrow mono">ray · 0.1.0 · windows launcher</p>
+        <h1 class="hero-title">Every app, one keystroke away.</h1>
+        <p class="hero-copy">Ray is a floating search bar for Windows. Press Ctrl + Space, type a few letters, and the app you want is already open. No dock, no desktop clutter, no window to manage.</p>
+        <div class="hero-actions">
           <a class="btn btn-primary" href="https://github.com/vihanga-nimsara/ray/releases/download/v0.1.0/Ray-0.1.0-setup.exe">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download for Windows
@@ -47,12 +47,12 @@
           </a>
           <a class="btn btn-ghost" href="https://github.com/vihanga-nimsara/ray" target="_blank" rel="noopener">View source</a>
         </div>
-        <div class="hero-meta reveal">
+        <div class="hero-meta">
           <span class="meta-item">Windows 10/11 · x64</span>
           <span class="meta-dot" aria-hidden="true"></span>
           <span class="meta-item">Free and open source · MIT</span>
         </div>
-        <div class="hero-keyhint reveal">
+        <div class="hero-keyhint">
           <span class="keyhint-label mono">Summon it with</span>
           <span class="keycaps" aria-label="Control plus space">
             <kbd class="keycap">Ctrl</kbd>
@@ -62,7 +62,7 @@
           <button class="copy-key" type="button" data-copy="Ctrl + Space" aria-label="Copy shortcut">Copy</button>
         </div>
 
-        <div class="hero-stage reveal" aria-hidden="true">
+        <div class="hero-stage" aria-hidden="true">
           <div class="stage-wallpaper"></div>
           <div class="stage-bar">
             <div class="spot-mock">
@@ -107,39 +107,48 @@
 
     <section class="section" id="features">
       <div class="wrap">
-        <div class="section-head reveal">
-          <p class="section-eyebrow mono">[01] Why ray</p>
-          <h2 class="section-title">Built to disappear.</h2>
-          <p class="section-copy">Ray shows up for one job and gets out of the way. Nothing to manage, nothing to close.</p>
-        </div>
+        <h2 class="section-title">Built to disappear.</h2>
+        <p class="section-copy">Ray shows up for one job and gets out of the way. Nothing to manage, nothing to close.</p>
         <div class="feature-grid">
-          <article class="feature-card reveal">
-            <span class="feature-index mono">01</span>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </span>
             <h3>Instant by default</h3>
             <p>The index is ready before you finish pressing the shortcut. Refreshes happen only while the bar is hidden.</p>
           </article>
-          <article class="feature-card reveal">
-            <span class="feature-index mono">02</span>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 8 4 4-4 4"/></svg>
+            </span>
             <h3>Keyboard first</h3>
             <p>Arrows, Enter, Esc and Ctrl + Enter. Selection never sticks after launch.</p>
           </article>
-          <article class="feature-card reveal">
-            <span class="feature-index mono">03</span>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 1 .33 1.82 1.65 1.65 0 0 1-1.51 1H3"/></svg>
+            </span>
             <h3>Yours to tune</h3>
             <p>Scale from 70% to 120%, recent count, result count, launch at login.</p>
           </article>
-          <article class="feature-card reveal">
-            <span class="feature-index mono">04</span>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>
+            </span>
             <h3>Out of the way</h3>
             <p>A tray app with no main window. Hides on Esc or a click outside.</p>
           </article>
-          <article class="feature-card reveal">
-            <span class="feature-index mono">05</span>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+            </span>
             <h3>Real icons</h3>
             <p>Start menu and Store apps, indexed with their native icons.</p>
           </article>
-          <article class="feature-card reveal">
-            <span class="feature-index mono">06</span>
+          <article class="feature-card">
+            <span class="feature-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </span>
             <h3>Quietly fast</h3>
             <p>Typing is coalesced to one render per frame. The window resizes only when it needs to.</p>
           </article>
@@ -147,30 +156,33 @@
       </div>
     </section>
 
-    <section class="section section-alt" id="how">
-      <div class="wrap how-wrap">
-        <div class="how-copy reveal">
-          <p class="section-eyebrow mono">[02] How it works</p>
-          <h2 class="section-title">Three steps, then it is gone.</h2>
-          <p class="section-copy">Ray opens on top of everything, takes your query, and hides the moment you are done.</p>
-        </div>
+    <section class="section" id="how">
+      <div class="wrap">
+        <h2 class="section-title">Three steps, then it is gone.</h2>
+        <p class="section-copy">Ray opens on top of everything, takes your query, and hides the moment you are done.</p>
         <ol class="how-steps">
-          <li class="how-step reveal">
-            <span class="how-number mono">01</span>
+          <li class="how-step">
+            <span class="how-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m6 8 4 4-4 4"/></svg>
+            </span>
             <div>
               <h3>Summon</h3>
               <p>Press Ctrl + Space anywhere in Windows. The bar appears centered, above every window.</p>
             </div>
           </li>
-          <li class="how-step reveal">
-            <span class="how-number mono">02</span>
+          <li class="how-step">
+            <span class="how-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+            </span>
             <div>
               <h3>Type</h3>
               <p>Recent apps show before you type. A few letters narrow the list to the one you want.</p>
             </div>
           </li>
-          <li class="how-step reveal">
-            <span class="how-number mono">03</span>
+          <li class="how-step">
+            <span class="how-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
             <div>
               <h3>Open</h3>
               <p>Enter launches. The bar resets, so the next search starts clean.</p>
@@ -181,13 +193,10 @@
     </section>
 
     <section class="section" id="shortcuts">
-      <div class="wrap shortcuts-wrap">
-        <div class="shortcuts-copy reveal">
-          <p class="section-eyebrow mono">[03] Shortcuts</p>
-          <h2 class="section-title">Drive it from the keyboard.</h2>
-          <p class="section-copy">The pointer stays visible, but you rarely need it.</p>
-        </div>
-        <div class="shortcut-list reveal">
+      <div class="wrap">
+        <h2 class="section-title">Drive it from the keyboard.</h2>
+        <p class="section-copy">The pointer stays visible, but you rarely need it.</p>
+        <div class="shortcut-list">
           <div class="shortcut-row">
             <div class="shortcut-keys">
               <kbd class="keycap">Ctrl</kbd><span class="keycap-plus">+</span><kbd class="keycap">Space</kbd>
@@ -222,33 +231,52 @@
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="wrap settings-wrap">
-        <div class="settings-copy reveal">
-          <p class="section-eyebrow mono">[04] Settings</p>
-          <h2 class="section-title">Tune it to your taste.</h2>
-          <p class="section-copy">Open settings from the gear in the bar or the tray menu. Changes apply immediately.</p>
+    <section class="section">
+      <div class="wrap">
+        <h2 class="section-title">Tune it to your taste.</h2>
+        <p class="section-copy">Open settings from the gear in the bar or the tray menu. Changes apply immediately.</p>
+        <div class="settings-grid">
           <ul class="settings-list">
-            <li>Floating bar on and off</li>
-            <li>Bar size from 70% to 120%</li>
-            <li>Recent apps on open, 1 to 5</li>
-            <li>Results while searching, 5 to 10</li>
-            <li>Launch at login</li>
-            <li>App index status and rebuild</li>
-            <li>Reset defaults and quit</li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+              Floating bar on and off
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+              Bar size from 70% to 120%
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Recent apps on open, 1 to 5
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+              Results while searching, 5 to 10
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+              Launch at login
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+              App index status and rebuild
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+              Reset defaults and quit
+            </li>
           </ul>
-        </div>
-        <div class="settings-shot reveal">
-          <img src="assets/ray-settings.png" alt="Ray settings window" width="560" height="640" loading="lazy" />
+          <div class="settings-shot">
+            <img src="assets/ray-settings.png" alt="Ray settings window" width="560" height="640" loading="lazy" />
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section" id="download">
       <div class="wrap">
-        <div class="download-card reveal">
-          <img class="download-logo" src="assets/ray-icon.png" alt="" width="64" height="64" />
-          <p class="section-eyebrow mono">[05] Download</p>
+        <div class="download-card">
+          <img class="download-logo" src="assets/ray-icon.png" alt="" width="56" height="56" />
           <h2 class="section-title">Get Ray for Windows.</h2>
           <p class="section-copy">Free and open source. Unsigned build, so Windows SmartScreen may ask for confirmation.</p>
           <div class="download-actions">
@@ -266,21 +294,25 @@
   </main>
 
   <footer class="footer">
-    <div class="wrap footer-wrap">
-      <div class="footer-brand">
-        <img class="brand-mark" src="assets/ray-icon.png" alt="" width="20" height="20" />
-        <span class="brand-name">ray</span>
-        <p class="footer-copy">A macOS-Spotlight-style floating app launcher for Windows. MIT licensed.</p>
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="#top" aria-label="Ray home">
+            <img class="brand-mark" src="assets/ray-icon.png" alt="" width="18" height="18" />
+            <span class="brand-name">ray</span>
+          </a>
+          <p class="footer-copy">A macOS-Spotlight-style floating app launcher for Windows. MIT licensed.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="https://github.com/vihanga-nimsara/ray">GitHub</a>
+          <a href="https://github.com/vihanga-nimsara/ray/releases">Releases</a>
+          <a href="https://github.com/vihanga-nimsara/ray/issues">Issues</a>
+          <a href="https://github.com/vihanga-nimsara/ray/blob/main/LICENSE">License</a>
+        </nav>
       </div>
-      <nav class="footer-nav" aria-label="Footer">
-        <a href="https://github.com/vihanga-nimsara/ray">GitHub</a>
-        <a href="https://github.com/vihanga-nimsara/ray/releases">Releases</a>
-        <a href="https://github.com/vihanga-nimsara/ray/issues">Issues</a>
-        <a href="https://github.com/vihanga-nimsara/ray/blob/main/LICENSE">License</a>
-      </nav>
-    </div>
-    <div class="wrap footer-bottom">
-      <span class="mono">Built with Electron. Inter by Rasmus Andersson. Icons from Heroicons.</span>
+      <div class="footer-bottom">
+        <span class="mono">Built with Electron. Inter by Rasmus Andersson. Icons from Heroicons and Lucide.</span>
+      </div>
     </div>
   </footer>
 
