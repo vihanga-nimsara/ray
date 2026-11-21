@@ -736,9 +736,7 @@ ul {
 }
 
 .feature-card:hover {
-  border-color: var(--accent);
   background: var(--grey-4);
-  transform: translateY(-2px);
 }
 
 .feature-icon {
@@ -790,8 +788,7 @@ ul {
 }
 
 .how-step:hover {
-  border-color: var(--accent);
-  transform: translateX(4px);
+  background: var(--grey-4);
 }
 
 .how-icon {
@@ -844,7 +841,6 @@ ul {
 }
 
 .shortcut-row:hover {
-  border-color: var(--accent);
   background: var(--grey-4);
 }
 
